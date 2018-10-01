@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WZF-Interest</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	<!--
+   
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<link href="css/Menu.css" rel="stylesheet" type="text/css"/>
+
+<style>
+nav {
+  height: 40px;
+  margin: 40px auto;
+  background-color: rgba(23, 23, 50, 0.7);
+  text-align: center;
+  border-radius: 4px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+}
+.main > li {
+  margin: 0 2%;
+}
+.main > li a{
+  border-left:1px solid rgba(23, 23, 50, 1);
+}
+a {
+  text-decoration: none;
+  color: #ffe;
+  text-transform: capitalize;
+  font-family: monospace;
+  display: block;
+  padding: 10px 15px;
+  font-size: 16px;
+  transition: background-color 0.5s ease-in-out;
+
+  font-family: "Raleway", sans-serif;
+}
+
+a:hover {
+  background-color: #631818;
+}
+
+.drop li {
+  opacity: 0;
+  transform-origin: top center;
+}
+
+.drop li a {
+  background-color: rgba(23, 23, 50, 0.7);
+  padding: 10px 0;
+}
+
+/*------------- menu1 animation -------------------*/
+
+.main li:hover .menu1 li:first-of-type {
+  animation: menu1 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+.main li:hover .menu1 li:nth-of-type(2) {
+  animation: menu1 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+.main li:hover .menu1 li:nth-of-type(3) {
+  animation: menu1 0.3s ease-in-out forwards;
+  animation-delay: 0.9s;
+}
+
+.main li:hover .menu1 li:last-of-type {
+  animation: menu1 0.3s ease-in-out forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes menu1 {
+  from {
+    opacity: 0;
+    transform: translateX(30px) rotateY(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+/*------------- menu2 animation -------------------*/
+
+.main li:hover .menu2 li:first-of-type {
+  animation: menu2 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+.main li:hover .menu2 li:nth-of-type(2) {
+  animation: menu2 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+.main li:hover .menu2 li:nth-of-type(3) {
+  animation: menu2 0.3s ease-in-out forwards;
+  animation-delay: 0.9s;
+}
+
+.main li:hover .menu2 li:last-of-type {
+  animation: menu2 0.3s ease-in-out forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes menu2 {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*------------- menu3 animation -------------------*/
+
+.main li:hover .menu3 li:first-of-type {
+  animation: menu3 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+.main li:hover .menu3 li:nth-of-type(2) {
+  animation: menu3 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+.main li:hover .menu3 li:nth-of-type(3) {
+  animation: menu3 0.3s ease-in-out forwards;
+  animation-delay: 0.9s;
+}
+
+.main li:hover .menu3 li:last-of-type {
+  animation: menu3 0.3s ease-in-out forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes menu3 {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+</style>
+  </head>
+  
+  <body style="background: url(IMG/CM.jpg);background-size:cover">
+  
+  <div class="text-center"> 
+    <h1 style="text-align:center">Zhifeng Wang -> Interest</h1>
+    </div>
+
+<nav>
+  <ul class="main">
+    <li><a href="Index.html">Home</a></li>
+    <li><a href="Graduate.html">Education</a>
+      <ul class="drop menu2">
+        <li><a href="#">Undergraduate</a></li>
+        <li><a href="Graduate.html">Graduate</a></li>
+      </ul> 
+    </li>
+    <li><a href="WorkE.html">Experience</a> 
+    <ul class="drop menu3">
+        <li><a href="#">Academic</a></li>
+        <li><a href="WorkE.html">Work</a></li>
+      </ul></li>
+    <li><a href="Interest.html">Interest</a> </li>
+    <li><a href="Contact.html">Contact</a></li>
+    <li><a href="About.html">About</a></li>
+  </ul>
+</nav>
+
+<p style="margin:20px"></p>
+
+ <div class="text-center"> 
+<video  width="500" controls>
+  <source src="OW.mp4" type="video/mp4">
+</video>
+</div>
+
+<p style="margin:20px"></p>
+
+<table border="1" width="100%">
+  <tr>
+    <th><div class="text-center">
+    <img src="IMG/dota2-2.jpg" class="img-rounded" alt="Cinque Terre" width="300"></img>
+    </div></th>
+    <th><table border="0" width="100%" >
+    <tr><td style="text-align:left"><h3>1. Games</h3></td></tr>
+    <tr><td style="text-align:left"><h4>Net games, video games, computer games...</h4></td></tr>
+    <tr><td style="text-align:left"><h4>Recently Dota2, Overwatch, MHW...</h4></td></tr>
+    </table>
+    </th>
+  </tr>
+  </table>
+  
+  <table border="0" width="100%"><tr>
+    <th><table border="0" width="100%" >
+    <tr><td style="text-align:left"><h3>2. Anime</h3></td></tr>
+    <tr><td style="text-align:left"><h4>Japanese animation DaiSiGi!!!</h4></td></tr>
+    <tr><td style="text-align:left"><h4>Especially fighting animes...Jump SaiKou!!!</h4></td></tr>
+     </table> </th>
+    <th><div class="text-center">
+    <img src="IMG/JUMP.jpg" class="img-rounded" alt="Cinque Terre" width="300"></img>
+    </div></th>
+  </tr>
+  </table>
+  
+  <table border="1" width="100%" >
+  
+  <tr>
+    <th><div class="text-center">
+    <img src="IMG/Go.jpg" class="img-rounded" alt="Cinque Terre" width="300"></img>
+    </div></th>
+    <th><table border="0" width="100%" >
+    <tr><td style="text-align:left"><h3>3. Go</h3></td></tr>
+    <tr><td style="text-align:left"><h4>Also called Weiqi...Amateur 5 Dan...</h4></td></tr>
+    <tr><td style="text-align:left"><h4>Be Go teacher and referee in Shanghai...</h4></td></tr>
+    
+    </table>
+    </th>
+  
+  </tr>
+  </table>
+  
+  
+  </body>
+</html>
+
