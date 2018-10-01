@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classlist> 
+   <class category="applet"> 
+       <title lang="en">Interactive System Design</title> 
+       <teacher>Giada De Laurentiis</teacher> 
+       <year>2018</year> 
+       <credit>3.0</credit> </class> 
+   <class category="English"> 
+       <title lang="en">Techncl Comnctns</title> 
+       <teacher>J K. Rowling</teacher> 
+       <year>2018</year> 
+       <credit>3.0</credit> </class> 
+   <class category="web"> 
+       <title lang="en">Web Technologues and Standards</title> 
+       <teacher>James McGovern</teacher> 
+       <year>2018</year> 
+       <credit>3.0</credit> </class> 
+   <class category="database"> 
+       <title lang="en">Database Management</title> 
+       <teacher>Erik T. Ray</teacher> 
+       <year>2018</year> 
+       <credit>3.0</credit> </class> 
+   <class category="factor"> 
+       <title lang="en">Human Factors</title> 
+       <teacher>Erik T. Ray</teacher> 
+       <year>2003</year> 
+       <credit>3.0</credit> </class> 
+</classlist>
