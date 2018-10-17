@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A Simple List</title>
+
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+<script type="text/javascript">
+	function add_shoppingcar(btn) {
+		$tr = $(btn).parent().siblings();
+		$name = $tr.eq(0).html();
+		$price = $tr.eq(1).html();
+
+		var new_tr = $("<tr>" +
+			"<td>" + $name + "</td>" +
+			"<td>" + $price + "</td>" +
+			"<td align='center'>" +
+			"<input type='button' value='-' onclick='change(this,-1);' />" +
+			"<input type='text' id='num' size='1' readonly='readonly' value='1'/>" +
+			"<input type='button' value='+' onclick='change(this,+1);' />" + "</td>" +
+			"<td>" + $price + "</td>" +
+			"<td align='center'>" +
+			"<input type='button' value='X' onclick='del(this);'/>" +
+			"</td></tr>");
+		$("#goods").append($(new_tr));
+
+		total();
+
+	}
+
+	function del(obj) {
+		$tr = $(obj).parent().parent();
+		$tr.remove();
+		total();
+	}
+
+	function total() {
+		$trs = $("#goods tr");
+		$sum = 0;
+		for (var i = 0; i < $trs.length; i++) {
+			$tds = $trs.eq(i).children();
+			$price = parseFloat($tds.eq(3).html());
+			$sum += $price;
+		}
+		$("#total").html($sum);
+
+	}
+	function change(btn, n) {
+		$td = $(btn).parent();
+		$inputs = $td.children();
+		$count = parseFloat($inputs.eq(1).val());
+		if ($count <= 1 && n < 0) {
+			return;
+		}
+		$count = $count + n;
+		$inputs.eq(1).val($count);
+		$price = parseFloat($td.prev().html());
+		$money = $price * $count;
+		$td.next().html($money);
+		total();
+	}
+</script>
+
+<style>
+.title {
+	border-right: 1px solid #333;
+	border-bottom: 1px solid #333;
+	text-align: center;
+}
+
+.tprice {
+	border-left: 1px solid #333;
+	border-top: 1px solid #333;
+	text-align: center;
+}
+
+input text {
+	width: 10px;
+}
+</style>
+</head>
+
+<body style="background: url(IMG/CM.jpg);background-size:cover">
+	<div class="text-center">
+		<h1>Add&Delete List</h1>
+	</div>
+
+	<p style="margin:20px"></p>
+
+	<div class="row text-center">
+		<div class="col-sm-6" style="background-color:lavender;">
+			<h1>Store</h1>
+
+			<table border="0" width="100%">
+				<tr class="title">
+					<td>Name</td>
+					<td>Price</td>
+					<td>Storage</td>
+					<td>Add to Cart</td>
+				</tr>
+
+				<tr>
+					<td>Switch</td>
+					<td>2001</td>
+					<td>61</td>
+					<td><input type="button" value="add"
+						onclick="add_shoppingcar(this);"></td>
+				</tr>
+
+				<tr>
+					<td>Play Station 5</td>
+					<td>2002</td>
+					<td>62</td>
+					<td><input type="button" value="add"
+						onclick="add_shoppingcar(this);"></td>
+				</tr>
+
+				<tr>
+					<td>XBox</td>
+					<td>2003</td>
+					<td>63</td>
+					<td><input type="button" value="add"
+						onclick="add_shoppingcar(this);"></td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div class="col-sm-6" style="background-color:lightcyan;">
+			<h1>List</h1>
+			<table border="0" width="100%">
+				<thead>
+					<tr class="title">
+						<td>Name</td>
+						<td>Price</td>
+						<td>Amount</td>
+						<td>Total</td>
+						<td>Delete</td>
+					</tr>
+				</thead>
+				<tbody id="goods">
+				</tbody>
+				<tfoot>
+					<tr class="tprice">
+						<td colspan="3" align="center">Total Price</td>
+						<td id="total"></td>
+						<td></td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>
